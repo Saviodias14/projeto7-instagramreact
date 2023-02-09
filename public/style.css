@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+body {
+  background-color: #fafafa;
+}
+span {
+  font-weight: 500;
+}
+* {
+  box-sizing: border-box;
+}
+h1 {
+  color: #262626;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+h2 {
+  color: #8e8e8e;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+h3 {
+  color: #139ef2;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+.perfil {
+  color: #262626;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+.perfil,
+h3,
+.topo-post img,
+h1,
+.logo img,
+.logo-2 img,
+.curtido-por img,
+.sidebar img,
+.seguir p:last-child,
+.ver-comentarios p,
+span,
+.foto-perfil:hover {
+  cursor: pointer;
+}
+ion-icon:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+}
+.cabeçalho {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 100%;
+  height: 54px;
+  border-bottom: 1px #dbdbdb solid;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+.inicio {
+  width: 935px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icons {
+  height: 18px;
+  width: 18px;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-2 {
+  display: none;
+  width: 100%;
+  padding: 0 17px;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo div {
+  width: 31px;
+  height: 22px;
+  border-right: 1px #dbdbdb solid;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+.logo-2 img,
+.logo img {
+  width: 103px;
+}
+input[type="text"] {
+  width: 215px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 1px #dbdbdb solid;
+  border-radius: 3px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  background-color: #fafafa;
+  text-align: center;
+}
+.icones {
+  width: 144px;
+  display: flex;
+  justify-content: space-between;
+}
+.container-principal {
+  margin-top: 54px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container-secundario {
+  width: 935px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.container-feed {
+  width: 614px;
+  display: flex;
+  flex-direction: column;
+}
+/*Estilos dos stories*/
+.stories {
+  background-color: white;
+  width: 614px;
+  height: 116px;
+  margin-top: 34px;
+  margin-bottom: 24px;
+  border: 1px #dbdbdb solid;
+  border-radius: 3px;
+  display: flex;
+  padding-left: 7px;
+  position: relative;
+  overflow: hidden;
+}
+.perfis {
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+}
+.imagens-perfil {
+  width: 66px;
+  height: 66px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.imagens-perfil img {
+  width: 66px;
+  border-radius: 33px;
+}
+.texto-perfil p {
+  color: #262626;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.texto-perfil {
+  width: 75px;
+  display: flex;
+  justify-content: center;
+}
+.foto-perfil img {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+}
+.foto-perfil {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+.stories ion-icon {
+  color: white;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  right: 9px;
+  top: 46px;
+}
+.stories ion-icon:hover {
+  color: rgb(194, 193, 193);
+}
+/*Fim dos estilos dos stories*/
+/*Início dos posts*/
+.post {
+  background-color: white;
+  width: 614px;
+  height: auto;
+  border: 1px #dbdbdb solid;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+.topo-post {
+  width: 614px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.perfil-post {
+  display: flex;
+  align-items: center;
+}
+.perfil-post img {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  margin-right: 15px;
+  margin-left: 17px;
+}
+.topo-post ion-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 17px;
+}
+.imagem-post {
+  max-width: 612px;
+}
+video {
+  max-width: 612px;
+}
+.base-post {
+  display: flex;
+  flex-direction: column;
+}
+.reacao {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reacao ion-icon:nth-child(1) {
+  margin-left: 17px;
+}
+.reacao ion-icon:nth-child(2) {
+  margin-left: 15px;
+}
+.reacao ion-icon:nth-child(3) {
+  margin-left: 15px;
+}
+.reacao ion-icon:last-child {
+  margin-right: 17px;
+}
+.curtido-por {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.curtido-por img {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin-left: 17px;
+  margin-right: 5px;
+}
+
+.curtido-por p {
+  color: #000000;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+}
+.comentarios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comentario {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 0;
+}
+.comentario p {
+  color: #262626;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 6px;
+}
+.comentario div:first-child {
+  display: flex;
+  width: auto;
+  margin-left: 17px;
+}
+.comentario div:last-child {
+  margin-right: 17px;
+}
+.comentario ion-icon {
+  width: 15px;
+  height: 15px;
+}
+.ver-comentarios {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 23px;
+}
+.ver-comentarios p {
+  color: #646464;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.caixa-de-comentario {
+  width: 100%;
+  height: 38px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.caixa-de-comentario p {
+  color: #b2dffc;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  position: absolute;
+  top: 11px;
+  right: 17px;
+  transition: color 300ms;
+}
+.caixa-de-comentario p:hover {
+  color: #0095f6;
+  cursor: pointer;
+}
+textarea {
+  color: #000000;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  border: none;
+  resize: none;
+  text-align: left;
+  width: 100%;
+  height: 36px;
+  padding-top: 11px;
+  padding-left: 17px;
+}
+
+/*Fim dos posts*/
+.sidebar {
+  width: 293px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+.aux-sidebar {
+  width: 293px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.topo-sidebar {
+  display: flex;
+  align-items: center;
+  margin-top: 57px;
+  margin-bottom: 24px;
+}
+.topo-sidebar img {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  margin-right: 17px;
+}
+.topo-sidebar p {
+  color: #8e8e8e;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+}
+.corpo-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.seguir {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 17px;
+}
+.seguir p:nth-child(1) {
+  color: #8e8e8e;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+.seguir p:nth-child(2) {
+  color: #262626;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+.seguir img {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  margin-right: 17px;
+}
+.seguir-perfil {
+  display: flex;
+}
+.notas {
+  height: 74px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.notas p {
+  color: #c7c7c7;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+}
+.menu-bottom {
+  background-color: white;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  width: 100%;
+  height: 54px;
+  border-bottom: 1px #dbdbdb solid;
+  position: fixed;
+  padding: 0;
+  bottom: 0px;
+  left: 0px;
+}
+.menu-bottom ion-icon:nth-child(1) {
+  margin-left: 17px;
+}
+.menu-bottom ion-icon:nth-last-child(1) {
+  margin-right: 17px;
+}
+@media (max-width: 935px) {
+  .sidebar,
+  .stories ion-icon {
+    display: none;
+  }
+  .container-secundario {
+    justify-content: center;
+  }
+  .inicio {
+    width: 100%;
+  }
+  .logo div:nth-child(1) {
+    margin-left: 17px;
+  }
+  .icones {
+    margin-right: 17px;
+  }
+}
+@media (max-width: 614px) {
+  .inicio,
+  input[type="text"],
+  .stories ion-icon {
+    display: none;
+  }
+  .logo-2,
+  .menu-bottom {
+    display: flex;
+  }
+  .stories {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin: 0;
+  }
+  .container-principal,
+  .container-secundario,
+  .container-feed,
+  .topo-post,
+  .base-post .curtido-por,
+  .stories {
+    width: 100%;
+  }
+  .container-principal,
+  .container-secundario,
+  .container-feed {
+    align-items: flex-end;
+  }
+
+  .post {
+    width: 100%;
+    height: auto;
+  }
+}
