@@ -10,7 +10,7 @@ span {
 }
 h1 {
   color: #262626;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -54,9 +54,10 @@ span,
 .foto-perfil:hover {
   cursor: pointer;
 }
+.topo-sidebar img:last-child:hover,
 ion-icon:hover {
   cursor: pointer;
-  color: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
 }
 .cabeçalho {
   background-color: white;
@@ -410,13 +411,10 @@ textarea {
   border-radius: 28px;
   margin-right: 17px;
 }
-.topo-sidebar p {
-  color: #8e8e8e;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 16px;
+.topo-sidebar img:last-child{
+  width: 17px;
+  height: 17px;
+  margin-left: 4px;
 }
 .corpo-sidebar {
   display: flex;

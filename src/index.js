@@ -1,13 +1,4 @@
-import NavBar from "./navBar";
 import ReactDOM  from "react-dom";
-import Corpo from "./corpo";
-function Teste(){
-    return(
-        <div>
-            <NavBar/>
-            <Corpo/>
-        </div>
-    )
-}
+import App from './app'
 
-ReactDOM.render(<Teste/>, document.querySelector('.root'));
+ReactDOM.render(<App/>, document.querySelector('.root'));

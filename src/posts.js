@@ -2,7 +2,7 @@ const listaDePostagens = [
     { imagemPerfil: "assets/hp-logo.jpg", nomePerfil: "harrypotterfilm", imagemPost: "assets/harry-potter.jpg", imagemCurtidaDestaque: "assets/cruzeiro.jpg", nomePerfilCurtidaDestaque: "cruzeiro", numeroDeCurtidas: "678", descricao: "After all this time? Always!!", numeroDeComentarios: "365", nomeDoSeuPerfil: "eu", seuComentario: "Amo Harry Potter!!! 😍😍😍" },
     { imagemPerfil: "assets/racionais-logo.jpg", nomePerfil: "racionaiscn", imagemPost: "assets/racionais.jpg", imagemCurtidaDestaque: "assets/Driven.png", nomePerfilCurtidaDestaque: "Driven", numeroDeCurtidas: "176.599", descricao: "Nada Como um Dia Após o Outro Dia, Vol.1", numeroDeComentarios: "7899", nomeDoSeuPerfil: "eu", seuComentario: "A Vida É Desafio é a música desse albúm que mais me emociona!!" },
     { imagemPerfil: "assets/djonga-logo.png", nomePerfil: "djongador", imagemPost: "assets/djonga.jpg", imagemCurtidaDestaque: "assets/itau.jpg", nomePerfilCurtidaDestaque: "itau", numeroDeCurtidas: "260.065", descricao: "Em 2017 eu lançava o albúm Heresia e foi algo que mudou minha vida e minha carreira.", numeroDeComentarios: "750", nomeDoSeuPerfil: "eu", seuComentario: "Albúm maravilhosoooo! Um tapa na cara da sociedade." },
-    { imagemPerfil: "assets/Driven.png", nomePerfil: "driven.education", imagemPost: "assets/", imagemCurtidaDestaque: "assets/perfil.png", nomePerfilCurtidaDestaque: "eu", numeroDeCurtidas: "2.078", descricao: "Seria isso um spoiler do que vem por ai???????????", numeroDeComentarios: "58", nomeDoSeuPerfil: "eu", seuComentario: "Asioso por isso!!" }
+    { imagemPerfil: "assets/Driven.png", nomePerfil: "driven.education", imagemPost: "assets/gatinho.png", imagemCurtidaDestaque: "assets/perfil.png", nomePerfilCurtidaDestaque: "eu", numeroDeCurtidas: "2.078", descricao: "Seria isso um spoiler do que vem por ai???????????", numeroDeComentarios: "58", nomeDoSeuPerfil: "eu", seuComentario: "Asioso por isso!!" }
 ]
 
 function Postagem(props) {
@@ -34,7 +34,7 @@ function Postagem(props) {
                     <img src={props.imagemCurtidaDestaque} />
                     <p>
                         Curtido por <span>{props.nomePerfilCurtidaDestaque}</span> e
-                        <span>outras {props.numeroDeCurtidas} pessoas</span>
+                        <span> outras {props.numeroDeCurtidas} pessoas</span>
                     </p>
                 </div>
                 <div class="comentarios">
