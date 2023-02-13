@@ -24,7 +24,7 @@ h1 {
 }
 h2 {
   color: #8e8e8e;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -32,7 +32,7 @@ h2 {
 }
 h3 {
   color: #139ef2;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -40,7 +40,7 @@ h3 {
 }
 .perfil {
   color: #262626;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -118,7 +118,7 @@ input[type="text"] {
   box-sizing: border-box;
   border: 1px #dbdbdb solid;
   border-radius: 3px;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -183,7 +183,7 @@ input[type="text"] {
 }
 .texto-perfil p {
   color: #262626;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -298,7 +298,7 @@ video {
 
 .curtido-por p {
   color: #000000;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -318,7 +318,7 @@ video {
 }
 .comentario p {
   color: #262626;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -347,7 +347,7 @@ video {
 }
 .ver-comentarios p {
   color: #646464;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -362,7 +362,7 @@ video {
 }
 .caixa-de-comentario p {
   color: #b2dffc;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -378,7 +378,7 @@ video {
 }
 textarea {
   color: #000000;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -434,7 +434,7 @@ textarea {
 }
 .seguir p:nth-child(1) {
   color: #8e8e8e;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -442,7 +442,7 @@ textarea {
 }
 .seguir p:nth-child(2) {
   color: #262626;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -465,7 +465,7 @@ textarea {
 }
 .notas p {
   color: #c7c7c7;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 11px;

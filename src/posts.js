@@ -33,7 +33,7 @@ function Postagem(props) {
                     name="ellipsis-horizontal-sharp"
                 ></ion-icon>
             </div>
-            <img data-test="post-image" src={props.imagemPost} className="imagem-post" onDoubleClick={()=>coracao==="heart-outline"?like():like()}/>
+            <img data-test="post-image" src={props.imagemPost} className="imagem-post" onDoubleClick={()=>coracao==="heart-outline"?like():""}/>
             <div className="base-post">
                 <div className="reacao">
                     <div>
