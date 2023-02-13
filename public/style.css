@@ -2,6 +2,12 @@
 body {
   background-color: #fafafa;
 }
+.base-post .reacao .curtido{
+  color: red;
+  height: 18px;
+  width: 18px;
+}
+
 span {
   font-weight: 500;
 }
@@ -536,7 +542,4 @@ textarea {
     width: 100%;
     height: auto;
   }
-}
-.curtido{
-  color: red;
 }

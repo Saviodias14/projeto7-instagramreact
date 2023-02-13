@@ -2,9 +2,9 @@ import { useState } from "react"
 
 const listaDePostagens = [
     { imagemPerfil: "assets/hp-logo.jpg", nomePerfil: "harrypotterfilm", imagemPost: "assets/harry-potter.jpg", imagemCurtidaDestaque: "assets/cruzeiro.jpg", nomePerfilCurtidaDestaque: "cruzeiro", numeroDeCurtidas: "678", descricao: "After all this time? Always!!", numeroDeComentarios: "365", nomeDoSeuPerfil: "savio_viana14", seuComentario: "Amo Harry Potter!!! 😍😍😍"},
-    { imagemPerfil: "assets/racionais-logo.jpg", nomePerfil: "racionaiscn", imagemPost: "assets/racionais.jpg", imagemCurtidaDestaque: "assets/Driven.png", nomePerfilCurtidaDestaque: "Driven", numeroDeCurtidas: "176.599", descricao: "Nada Como um Dia Após o Outro Dia, Vol.1", numeroDeComentarios: "7899", nomeDoSeuPerfil: "savio_viana14", seuComentario: "A Vida É Desafio é a música desse albúm que mais me emociona!!"},
-    { imagemPerfil: "assets/djonga-logo.png", nomePerfil: "djongador", imagemPost: "assets/djonga.jpg", imagemCurtidaDestaque: "assets/itau.jpg", nomePerfilCurtidaDestaque: "itau", numeroDeCurtidas: "260.065", descricao: "Em 2017 eu lançava o albúm Heresia e foi algo que mudou minha vida e minha carreira.", numeroDeComentarios: "750", nomeDoSeuPerfil: "savio_viana14", seuComentario: "Albúm maravilhosoooo! Um tapa na cara da sociedade."},
-    { imagemPerfil: "assets/Driven.png", nomePerfil: "driven.education", imagemPost: "assets/gatinho.png", imagemCurtidaDestaque: "assets/perfil.png", nomePerfilCurtidaDestaque: "savio_viana14", numeroDeCurtidas: "2.078", descricao: "Seria isso um spoiler do que vem por ai???????????", numeroDeComentarios: "58", nomeDoSeuPerfil: "savio_viana14", seuComentario: "Asioso por isso!!"}
+    { imagemPerfil: "assets/racionais-logo.jpg", nomePerfil: "racionaiscn", imagemPost: "assets/racionais.jpg", imagemCurtidaDestaque: "assets/Driven.png", nomePerfilCurtidaDestaque: "Driven", numeroDeCurtidas: "176599", descricao: "Nada Como um Dia Após o Outro Dia, Vol.1", numeroDeComentarios: "7899", nomeDoSeuPerfil: "savio_viana14", seuComentario: "A Vida É Desafio é a música desse albúm que mais me emociona!!"},
+    { imagemPerfil: "assets/djonga-logo.png", nomePerfil: "djongador", imagemPost: "assets/djonga.jpg", imagemCurtidaDestaque: "assets/itau.jpg", nomePerfilCurtidaDestaque: "itau", numeroDeCurtidas: "260065", descricao: "Em 2017 eu lançava o albúm Heresia e foi algo que mudou minha vida e minha carreira.", numeroDeComentarios: "750", nomeDoSeuPerfil: "savio_viana14", seuComentario: "Albúm maravilhosoooo! Um tapa na cara da sociedade."},
+    { imagemPerfil: "assets/Driven.png", nomePerfil: "driven.education", imagemPost: "assets/gatinho.png", imagemCurtidaDestaque: "assets/perfil.png", nomePerfilCurtidaDestaque: "savio_viana14", numeroDeCurtidas: "2078", descricao: "Seria isso um spoiler do que vem por ai???????????", numeroDeComentarios: "58", nomeDoSeuPerfil: "savio_viana14", seuComentario: "Asioso por isso!!"}
 ]
 
 function Postagem(props) {
@@ -12,12 +12,14 @@ function Postagem(props) {
     const [estaCurtido, setEstaCurtido] = useState("icons")
     const [coracao, setCoracao] = useState("heart-outline")
     function like(){
+        setEstaCurtido("curtido")
         setCoracao("heart")
-        setEstaCurtido("icons curtido")
+        
     }
     function deslike(){
-        setCoracao("heart-outline")
         setEstaCurtido("icons")
+        setCoracao("heart-outline")
+        
     }
     return (
         <div className="post">
@@ -31,7 +33,7 @@ function Postagem(props) {
                     name="ellipsis-horizontal-sharp"
                 ></ion-icon>
             </div>
-            <img src={props.imagemPost} className="imagem-post" />
+            <img src={props.imagemPost} className="imagem-post" onDoubleClick={()=>estaCurtido==="icons"?like():like()}/>
             <div className="base-post">
                 <div className="reacao">
                     <div>
@@ -47,7 +49,7 @@ function Postagem(props) {
                     <img src={props.imagemCurtidaDestaque} />
                     <p>
                         Curtido por <span>{props.nomePerfilCurtidaDestaque}</span> e
-                        <span> outras {props.numeroDeCurtidas} pessoas</span>
+                        <span> outras {estaCurtido==="icons"?props.numeroDeCurtidas:Number(props.numeroDeCurtidas)+1} pessoas</span>
                     </p>
                 </div>
                 <div className="comentarios">
