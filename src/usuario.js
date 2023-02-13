@@ -4,11 +4,11 @@ import { useState } from "react";
 function User(props){
     return(
         <div className="topo-sidebar">
-            <img onClick={props.alteraFoto} src={props.fotoDoUsuario} />
+            <img data-test="profile-image" onClick={props.alteraFoto} src={props.fotoDoUsuario} />
             <div>
-                <h1>{props.nomeDoUsuario}</h1>
+                <h1 data-test="name">{props.nomeDoUsuario}</h1>
             </div>
-            <img onClick={props.alteraNome} src="assets/pencil.png"/>
+            <img data-test="edit-name" onClick={props.alteraNome} src="assets/pencil.png"/>
         </div>
     )
 }

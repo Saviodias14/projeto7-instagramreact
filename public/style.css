@@ -2,7 +2,7 @@
 body {
   background-color: #fafafa;
 }
-.base-post .reacao .curtido{
+.curtido{
   color: red;
   height: 18px;
   width: 18px;
@@ -492,7 +492,7 @@ textarea {
   margin-right: 17px;
 }
 @media (max-width: 935px) {
-  .sidebar,
+  .aux-sidebar,
   .stories ion-icon {
     display: none;
   }
@@ -538,6 +538,7 @@ textarea {
     align-items: flex-end;
   }
 
+  .imagem-post,
   .post {
     width: 100%;
     height: auto;

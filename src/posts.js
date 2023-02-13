@@ -9,20 +9,20 @@ const listaDePostagens = [
 
 function Postagem(props) {
     const [tipo, setTipo] = useState('bookmark-outline')
-    const [estaCurtido, setEstaCurtido] = useState("icons")
     const [coracao, setCoracao] = useState("heart-outline")
+    const [color,setColor] = useState('#000000')
     function like(){
-        setEstaCurtido("curtido")
         setCoracao("heart")
+        setColor('#ff0000')
         
     }
     function deslike(){
-        setEstaCurtido("icons")
         setCoracao("heart-outline")
+        setColor('#000000')
         
     }
     return (
-        <div className="post">
+        <div data-test="post" className="post">
             <div className="topo-post">
                 <div className="perfil-post">
                     <img src={props.imagemPerfil} />
@@ -33,23 +33,23 @@ function Postagem(props) {
                     name="ellipsis-horizontal-sharp"
                 ></ion-icon>
             </div>
-            <img src={props.imagemPost} className="imagem-post" onDoubleClick={()=>estaCurtido==="icons"?like():like()}/>
+            <img data-test="post-image" src={props.imagemPost} className="imagem-post" onDoubleClick={()=>coracao==="heart-outline"?like():like()}/>
             <div className="base-post">
                 <div className="reacao">
                     <div>
-                        <ion-icon className={estaCurtido} name={coracao} onClick={()=>estaCurtido==="icons"?like():deslike()}></ion-icon>
+                        <ion-icon data-test="like-post" className="icons" style={{color:color}} name={coracao} onClick={()=>coracao==="heart-outline"?like():deslike()}></ion-icon>
                         <ion-icon className="icons" name="chatbubble-outline"></ion-icon>
                         <ion-icon className="icons" name="paper-plane-outline"></ion-icon>
                     </div>
                     <div>
-                        <ion-icon onClick={()=>tipo==='bookmark-outline'?setTipo('bookmark-sharp'):setTipo('bookmark-outline')} className="icons" name={tipo}></ion-icon>
+                        <ion-icon data-test="save-post" onClick={()=>tipo==='bookmark-outline'?setTipo('bookmark-sharp'):setTipo('bookmark-outline')} className="icons" name={tipo}></ion-icon>
                     </div>
                 </div>
                 <div className="curtido-por">
                     <img src={props.imagemCurtidaDestaque} />
                     <p>
                         Curtido por <span>{props.nomePerfilCurtidaDestaque}</span> e
-                        <span> outras {estaCurtido==="icons"?props.numeroDeCurtidas:Number(props.numeroDeCurtidas)+1} pessoas</span>
+                        <span data-test="likes-number"> outras {coracao==="heart-outline"?props.numeroDeCurtidas:Number(props.numeroDeCurtidas)+1} pessoas</span>
                     </p>
                 </div>
                 <div className="comentarios">
