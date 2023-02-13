@@ -2,10 +2,10 @@ import Sugestoes from "./sugestoes";
 import Usuario from "./usuario";
 export default function SideBar(){
     return(
-        <div className="sidebar">
+        <div classNameName="sidebar">
             <Usuario/>
             <Sugestoes/>
-            <div class="notas">
+            <div className="notas">
               <p>
                 Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade •
                 Termos • Localizações • Contas mais relevantes • Hashtags •

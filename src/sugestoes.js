@@ -7,8 +7,8 @@ const listaQuemSeguir = [
 ]
 function PerfilSugestao(props){
     return(
-        <div class="seguir">
-                    <div class="seguir-perfil">
+        <div className="seguir">
+                    <div className="seguir-perfil">
                         <img src={props.fotoPerfil} />
                         <div>
                             <h1>{props.nickPerfil}</h1>
@@ -22,11 +22,11 @@ function PerfilSugestao(props){
 export default function Sugestoes() {
     return (
         <div>
-            <div class="seguir">
+            <div className="seguir">
                 <p>Sugestões para você</p>
                 <p>Ver tudo</p>
             </div>
-            <div class="corpo-sidebar">
+            <div className="corpo-sidebar">
                 {listaQuemSeguir.map(elemento=>(<PerfilSugestao fotoPerfil={elemento.fotoPerfil} nickPerfil={elemento.nickPerfil} nomePerfil={elemento.nomePerfil}/>))}
             </div>
         </div>

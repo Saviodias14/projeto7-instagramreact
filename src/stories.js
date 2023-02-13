@@ -10,14 +10,14 @@ const listaDeStories = [
 
 function Perfil (props){
     return(
-        <div class="perfis">
-            <div class="imagens-perfil">
+        <div className="perfis">
+            <div className="imagens-perfil">
                 <img src="assets/stories_background.jpg" />
-                <div class="foto-perfil">
+                <div className="foto-perfil">
                     <img src={props.imagem} />
                 </div>
             </div>
-            <div class="texto-perfil">
+            <div className="texto-perfil">
                 <p>{props.texto}</p>
             </div>
         </div>
@@ -25,7 +25,7 @@ function Perfil (props){
 }
 export default function Stories() {
     return (
-        <div class="stories">
+        <div className="stories">
             {listaDeStories.map(elemento => <Perfil imagem = {elemento.foto} texto = {elemento.nome}/>)}
             <ion-icon name="chevron-forward-circle-sharp"></ion-icon>
         </div>

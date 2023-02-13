@@ -1,8 +1,19 @@
 import { useState } from "react";
 
+
+function User(props){
+    return(
+        <div className="topo-sidebar">
+            <img onClick={props.alteraFoto} src={props.fotoDoUsuario} />
+            <div>
+                <h1>{props.nomeDoUsuario}</h1>
+            </div>
+            <img onClick={props.alteraNome} src="assets/pencil.png"/>
+        </div>
+    )
+}
 export default function Usuario() {
     const [nomeDoUsuario,setNomeDoUsuario]= useState('Mude seu nome aqui =>')
-
     function alteraNome(){
         const nomeRecebido = prompt('Digite seu Nick ou seu Nome');
         nomeRecebido?setNomeDoUsuario(nomeRecebido):setNomeDoUsuario(nomeDoUsuario);
@@ -14,12 +25,6 @@ export default function Usuario() {
         novaFoto?setFotoDoUsuario(novaFoto):setFotoDoUsuario(fotoDoUsuario); 
     }
     return (
-        <div class="topo-sidebar">
-            <img onClick={alteraFoto} src={fotoDoUsuario} />
-            <div>
-                <h1>{nomeDoUsuario}</h1>
-            </div>
-            <img onClick={alteraNome} src="assets/pencil.png"/>
-        </div>
+        <User alteraFoto={alteraFoto} alteraNome={alteraNome} fotoDoUsuario={fotoDoUsuario} nomeDoUsuario={nomeDoUsuario}/>
     )
 }
